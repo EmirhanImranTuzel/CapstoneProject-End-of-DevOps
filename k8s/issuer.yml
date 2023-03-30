@@ -1,0 +1,20 @@
+apiVersion: awspca.cert-manager.io/v1beta1
+kind: AWSPCAClusterIssuer
+metadata:
+  name: aws-pca-issuer
+  namespace: cert-manager
+spec:
+  region: us-east-1
+  arn: arn:aws:acm-pca:us-east-1:130010082460:certificate-authority/c1d6bd93-2517-4433-b525-c2e402050ee9
+
+# apiVersion: awspca.cert-manager.io/v1beta1
+# kind: AWSPCAIssuer
+# metadata:
+#   name: aws-pca-issuer
+#   namespace: cert-manager
+# spec:
+#   arn: arn:aws:acm-pca:us-east-1:130010082460:certificate-authority/c1d6bd93-2517-4433-b525-c2e402050ee9
+#   region: eu-east-1
+#   secretRef:
+#     namespace: cert-manager
+#     name: aws-credentials
